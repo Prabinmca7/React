@@ -9,9 +9,9 @@ super(props);
     number : [1,2,3,4],
     user : {
       name : "Prabin",
-      Age : 27
+      Age : 37
     },
-    inputValue:''
+    inputValue:'10'
   }
 }
 
