@@ -27,6 +27,14 @@ const initialProperties = [
     location: 'Kanyakumari',
     price: ' RS 850,000',
     liked: false
+  },
+  {
+    id: 4,
+    title: 'House For Sale in KKV',
+    image: 'https://imagecdn.99acres.com/media1/29535/6/590706037M-1745829276351.jpg',
+    location: 'Kaliyakavilai',
+    price: ' RS 850,000',
+    liked: false
   }
 ];
 
