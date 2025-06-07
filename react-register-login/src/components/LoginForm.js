@@ -16,26 +16,26 @@ export default function LoginForm({ onSuccess }) {
 
   const onSubmit = async (data) => {
     console.log(data);
-    // try {
-    //   const response = await axios.post(
-    //     API_LOGIN,
-    //     {
-    //       email: data.email,
-    //       password: data.password,
-    //     },
-    //     {
-    //       headers: {
-    //         "x-api-key": API_KEY,
-    //       },
-    //     }
-    //   );
-    //   onSuccess(`Login successful! Token: ${response.data.token}`);
-    //   reset();
-    // } catch (error) {
-    //   const message =
-    //     error.response?.data?.error || "Network or unknown error";
-    //   onSuccess(message);
-    // }
+    try {
+      const response = await axios.post(
+        API_LOGIN,
+        {
+          email: data.email,
+          password: data.password,
+        },
+        {
+          headers: {
+            "x-api-key": API_KEY,
+          },
+        }
+      );
+      onSuccess(`Login successful! Token: ${response.data.token}`);
+      reset();
+    } catch (error) {
+      const message =
+        error.response?.data?.error || "Network or unknown error";
+      onSuccess(message);
+    }
   };
 
   return (
